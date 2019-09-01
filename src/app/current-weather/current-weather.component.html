@@ -1,22 +1,17 @@
-<div>
+<div *ngIf="current">
   <div>
-    <span>
-      {{ current.city }}, {{current.country}}
-    </span>
-    <span>
-      {{ current.date | date: fullDate }}
-    </span>
+    <span>{{ current.city }}, {{ current.country }} </span>
+    <span>{{ current.date | date: fullDate }}</span>
+  </div>
+  <br>
+  <div>
+    {{ current.description }}
   </div>
   <div>
     <img [src]='current.image'>
-    <span>
-      {{ current.tempCelsius | number: '1.0-0'}} &#8451;
-    </span>
-    <span>
-      {{ current.tempFahrenheit | number: '1.0-0'}} &#8457;
-    </span>
   </div>
   <div>
-    {{ current.description }}
+    <span>{{ current.tempCelsius | number: '1.0-0' }}&#8451;  </span>
+    <span>{{ current.tempFahrenheit | number: '1.0-0' }}&#8457;</span>
   </div>
 </div>

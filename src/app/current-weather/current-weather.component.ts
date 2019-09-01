@@ -11,17 +11,7 @@ import { CurrentWeatherService } from './current-weather.service'
 export class CurrentWeatherComponent implements OnInit {
   current: ICurrentWeather
 
-  constructor(private service: CurrentWeatherService) {
-    this.current = {
-      city: '--',
-      country: '--',
-      date: Date.now(),
-      image: '',
-      tempCelsius: 0,
-      tempFahrenheit: 0,
-      description: ''
-    }
-  }
+  constructor(private service: CurrentWeatherService) {}
 
   ngOnInit() {
     this.service.fetchWeather('Auckland', 'NZ').subscribe(
