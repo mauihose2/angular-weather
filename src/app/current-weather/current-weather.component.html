@@ -3,15 +3,15 @@
     <span>{{ current.city }}, {{ current.country }} </span>
     <span>{{ current.date | date: fullDate }}</span>
   </div>
-  <br>
-  <div>
-    {{ current.description }}
-  </div>
   <div>
     <img [src]='current.image'>
   </div>
   <div>
-    <span>{{ current.tempCelsius | number: '1.0-0' }}&#8451;  </span>
+    <span>{{ current.tempCelsius | number: '1.0-0' }}&#8451; : </span>
     <span>{{ current.tempFahrenheit | number: '1.0-0' }}&#8457;</span>
+  </div>
+  <br>
+  <div>
+    {{ current.description }}
   </div>
 </div>
