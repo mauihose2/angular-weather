@@ -3,6 +3,7 @@ export interface ICurrentWeather {
   country: string
   date: number
   image: string
-  temperature: number
+  tempCelsius: number
+  tempFahrenheit: number
   description: string
 }
