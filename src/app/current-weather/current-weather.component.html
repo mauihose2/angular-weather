@@ -10,7 +10,10 @@
   <div>
     <img [src]='current.image'>
     <span>
-      {{ current.temperature | number: '1.0-0'}} &#8451;
+      {{ current.tempCelsius | number: '1.0-0'}} &#8451;
+    </span>
+    <span>
+      {{ current.tempFahrenheit | number: '1.0-0'}} &#8457;
     </span>
   </div>
   <div>
